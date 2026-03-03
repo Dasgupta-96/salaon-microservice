@@ -21,9 +21,6 @@ spring:
           uri: lb://SALON-SERVICE
           predicates:
             - Path=/api/salon/**
-eureka:
-  instance:
-    prefer-ip-address: true
     
 eureka:
   client:
