@@ -13,6 +13,8 @@ server:
           uri: lb://USER-SERVICE
           predicates:
             - Path=/api/user/**
+          filters:
+            - name: LoginFilters
         
           
 
