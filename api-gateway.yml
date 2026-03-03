@@ -1,0 +1,25 @@
+server:
+  port: 5003
+
+  main:
+    web-application-type: reactive
+
+  cloud:
+    gateway:
+      routes:
+
+        # ---------------- USER SERVICE ----------------
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/api/users/**
+          filters:
+            - StripPrefix=2
+
+        # ---------------- SALON SERVICE ----------------
+        - id: salon-service
+          uri: lb://SALON-SERVICE
+          predicates:
+            - Path=/api/salon/**
+          filters:
+            - StripPrefix=2
