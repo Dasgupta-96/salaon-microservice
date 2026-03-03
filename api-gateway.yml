@@ -12,9 +12,9 @@ server:
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
-            - Path=/api/users/**
+            - Path=/api/user/**
           filters:
-            - StripPrefix=2
+          
 
         # ---------------- SALON SERVICE ----------------
         - id: salon-service
@@ -22,4 +22,4 @@ server:
           predicates:
             - Path=/api/salon/**
           filters:
-            - StripPrefix=2
+      
