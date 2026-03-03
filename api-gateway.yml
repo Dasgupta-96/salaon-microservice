@@ -14,7 +14,7 @@ server:
           predicates:
             - Path=/api/user/**
           filters:
-          -name: LoginFilters
+            - name: LoginFilters
           
 
         # ---------------- SALON SERVICE ----------------
