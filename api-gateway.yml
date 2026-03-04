@@ -20,7 +20,7 @@ spring:
         - id: salon-service
           uri: lb://SALON-SERVICE
           predicates:
-            - Path=/api/salon/**
+            - Path=/api/admin/**
     
 eureka:
   client:
