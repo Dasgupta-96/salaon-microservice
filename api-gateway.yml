@@ -21,6 +21,11 @@ spring:
           uri: lb://SALON-SERVICE
           predicates:
             - Path=/api/salon/**
+
+        - id: category-service
+          uri: lb://CATEGORY-SERVICE
+          predicates:
+            - Path=/api/category**
     
 eureka:
   client:
