@@ -11,7 +11,6 @@ spring:
   cloud:
     gateway:
       routes:
-
         - id: user-service
           uri: lb://USER-SERVICE
           predicates:
@@ -27,11 +26,11 @@ spring:
           predicates:
             - Path=/api/category/**
 
-         - id: service-offering
+        - id: service-offering
           uri: lb://SERVICE-OFFERING
           predicates:
             - Path=/api/serviceoffering/**
-    
+
 eureka:
   client:
     service-url:
