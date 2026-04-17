@@ -36,7 +36,3 @@ spring:
           predicates:
             - Path=/api/booking/**
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka
